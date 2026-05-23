@@ -61,6 +61,7 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
 import type { Product } from '../types'
+import { img } from '../utils/img'
 
 const category = ref('')
 const sort = ref('')
@@ -73,24 +74,24 @@ watch(category, () => {
 })
 
 const products: Product[] = [
-  { id: 'p01', name: '三花貓鑰匙圈', series: '春季系列', price: 120, image: '/mpbzfcpd-cat_product_01.png', category: '鑰匙圈' },
-  { id: 'p02', name: '白貓公仔', series: '春季系列', price: 120, image: '/mpbzfcpp-cat_product_02.png', category: '公仔' },
-  { id: 'p03', name: '黑貓夜燈公仔', series: '春季系列', price: 480, image: '/mpbzfcq0-cat_product_03.png', tag: '限定', category: '公仔' },
-  { id: 'p04', name: '貓掌肉球玩偶', series: '春季系列', price: 120, image: '/mpbzfcq9-cat_product_04.png', category: '玩偶' },
-  { id: 'p05', name: '虎斑貓鑰匙圈', series: '春季系列', price: 120, image: '/mpbzfcqj-cat_product_05.png', category: '鑰匙圈' },
-  { id: 'p06', name: '摺耳貓公仔', series: '春季系列', price: 280, image: '/mpbzfcqr-cat_product_06.png', category: '公仔' },
-  { id: 'p07', name: '貓尾巴筆', series: '文具系列', price: 150, image: '/mpbzfcqz-cat_product_07.png', category: '文具' },
-  { id: 'p08', name: '貓咪手帳筆記本（3冊組）', series: '文具系列', price: 190, image: '/mpbzfcr7-cat_product_08.png', category: '文具' },
-  { id: 'p09', name: '貓肉球原子筆（3色組）', series: '文具系列', price: 170, image: '/mpbzfcrh-cat_product_09.png', category: '文具' },
-  { id: 'p10', name: '夜光鑰匙圈', series: '夜森林系列', price: 180, image: '/mpbzfcrq-cat_product_10.png', category: '鑰匙圈' },
-  { id: 'p11', name: '夜光森林貓咪杯墊（4入）', series: '夜森林系列', price: 220, image: '/mpbzfcs2-cat_product_11.png', category: '居家' },
-  { id: 'p12', name: '夜光貓手機掛繩', series: '夜森林系列', price: 250, image: '/mpbzfcsa-cat_product_12.png', category: '穿戴' },
-  { id: 'p13', name: '貓咪造型小時鐘', series: '派對系列', price: 220, image: '/mpbzfct5-cat_product_13.png', category: '時鐘' },
-  { id: 'p14', name: '貓耳造型隨身鏡', series: '派對系列', price: 350, image: '/mpbzfcte-cat_product_14.png', category: '配件' },
-  { id: 'p15', name: '貓掌肉球靠墊', series: '人氣周邊', price: 350, image: '/mpbzfctn-cat_product_15.png', category: '靠墊' },
-  { id: 'p16', name: '貓耳毛絨髮帶', series: '人氣周邊', price: 160, image: '/mpbzfctv-cat_product_16.png', category: '穿戴' },
-  { id: 'p17', name: '貓咪環保購物袋（摺疊款）', series: '人氣周邊', price: 240, image: '/mpbzfcu5-cat_product_17.png', category: '配件' },
-  { id: 'p18', name: '流體貓吊飾（隨機款）', series: '人氣周邊', price: 150, image: '/mpbzfcue-cat_product_18.png', category: '配件' },
+  { id: 'p01', name: '三花貓鑰匙圈', series: '春季系列', price: 120, image: img('/mpbzfcpd-cat_product_01.png'), category: '鑰匙圈' },
+  { id: 'p02', name: '白貓公仔', series: '春季系列', price: 120, image: img('/mpbzfcpp-cat_product_02.png'), category: '公仔' },
+  { id: 'p03', name: '黑貓夜燈公仔', series: '春季系列', price: 480, image: img('/mpbzfcq0-cat_product_03.png'), tag: '限定', category: '公仔' },
+  { id: 'p04', name: '貓掌肉球玩偶', series: '春季系列', price: 120, image: img('/mpbzfcq9-cat_product_04.png'), category: '玩偶' },
+  { id: 'p05', name: '虎斑貓鑰匙圈', series: '春季系列', price: 120, image: img('/mpbzfcqj-cat_product_05.png'), category: '鑰匙圈' },
+  { id: 'p06', name: '摺耳貓公仔', series: '春季系列', price: 280, image: img('/mpbzfcqr-cat_product_06.png'), category: '公仔' },
+  { id: 'p07', name: '貓尾巴筆', series: '文具系列', price: 150, image: img('/mpbzfcqz-cat_product_07.png'), category: '文具' },
+  { id: 'p08', name: '貓咪手帳筆記本（3冊組）', series: '文具系列', price: 190, image: img('/mpbzfcr7-cat_product_08.png'), category: '文具' },
+  { id: 'p09', name: '貓肉球原子筆（3色組）', series: '文具系列', price: 170, image: img('/mpbzfcrh-cat_product_09.png'), category: '文具' },
+  { id: 'p10', name: '夜光鑰匙圈', series: '夜森林系列', price: 180, image: img('/mpbzfcrq-cat_product_10.png'), category: '鑰匙圈' },
+  { id: 'p11', name: '夜光森林貓咪杯墊（4入）', series: '夜森林系列', price: 220, image: img('/mpbzfcs2-cat_product_11.png'), category: '居家' },
+  { id: 'p12', name: '夜光貓手機掛繩', series: '夜森林系列', price: 250, image: img('/mpbzfcsa-cat_product_12.png'), category: '穿戴' },
+  { id: 'p13', name: '貓咪造型小時鐘', series: '派對系列', price: 220, image: img('/mpbzfct5-cat_product_13.png'), category: '時鐘' },
+  { id: 'p14', name: '貓耳造型隨身鏡', series: '派對系列', price: 350, image: img('/mpbzfcte-cat_product_14.png'), category: '配件' },
+  { id: 'p15', name: '貓掌肉球靠墊', series: '人氣周邊', price: 350, image: img('/mpbzfctn-cat_product_15.png'), category: '靠墊' },
+  { id: 'p16', name: '貓耳毛絨髮帶', series: '人氣周邊', price: 160, image: img('/mpbzfctv-cat_product_16.png'), category: '穿戴' },
+  { id: 'p17', name: '貓咪環保購物袋（摺疊款）', series: '人氣周邊', price: 240, image: img('/mpbzfcu5-cat_product_17.png'), category: '配件' },
+  { id: 'p18', name: '流體貓吊飾（隨機款）', series: '人氣周邊', price: 150, image: img('/mpbzfcue-cat_product_18.png'), category: '配件' },
 ]
 
 

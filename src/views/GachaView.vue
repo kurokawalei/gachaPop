@@ -60,10 +60,10 @@
                 {{ r.rarity === 4 ? '★ 稀有' : '一般' }}
               </div>
               <div style="display:flex;flex-direction:column;gap:4px;align-items:center;margin-top:6px">
-                <button class="btn btn-sm" @click="addToCart(r.pullIndex)" :disabled="isProcessed(r.pullIndex)">
+                <button class="btn btn-sm" @click="addToCart(r.pullIndex)" :disabled="isProcessed(r.pullIndex)" style="width:100%">
                   {{ isProcessed(r.pullIndex) ? '已處理' : '加入購物車' }}
                 </button>
-                <button class="btn btn-sm" @click="moveToWarehouse(r.pullIndex)" :disabled="isProcessed(r.pullIndex)" style="border-color:var(--muted);color:var(--muted)">
+                <button class="btn btn-sm" @click="moveToWarehouse(r.pullIndex)" :disabled="isProcessed(r.pullIndex)" style="width:100%">
                   {{ isProcessed(r.pullIndex) ? '已處理' : '移至倉庫' }}
                 </button>
               </div>

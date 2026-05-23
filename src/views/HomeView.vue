@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="hero-visual">
-          <img src="/mpbzfcq0-cat_product_03.png" alt="Cat collection" loading="lazy">
+          <img :src="img('mpbzfcq0-cat_product_03.png')" alt="Cat collection" loading="lazy">
         </div>
       </div>
     </section>
@@ -26,7 +26,7 @@
         <div class="featured-grid">
           <div class="product-card featured-main">
             <div class="product-card-image">
-              <img src="/mpbzfcq0-cat_product_03.png" alt="Black cat night light figure" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              <img :src="img('mpbzfcq0-cat_product_03.png')" alt="Black cat night light figure" style="width:100%;height:100%;object-fit:cover" loading="lazy">
             </div>
             <div class="product-card-body">
               <span class="tag tag-accent" style="margin-bottom:var(--space-xs)">限定</span>
@@ -37,7 +37,7 @@
           </div>
           <div class="product-card">
             <div class="product-card-image">
-              <img src="/mpbzfcpd-cat_product_01.png" alt="Calico cat keychain" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              <img :src="img('mpbzfcpd-cat_product_01.png')" alt="Calico cat keychain" style="width:100%;height:100%;object-fit:cover" loading="lazy">
             </div>
             <div class="product-card-body">
               <h3>三花貓鑰匙圈</h3>
@@ -47,7 +47,7 @@
           </div>
           <div class="product-card">
             <div class="product-card-image">
-              <img src="/mpbzfctn-cat_product_15.png" alt="Cat paw cushion" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              <img :src="img('mpbzfctn-cat_product_15.png')" alt="Cat paw cushion" style="width:100%;height:100%;object-fit:cover" loading="lazy">
             </div>
             <div class="product-card-body">
               <h3>貓掌肉球靠墊</h3>
@@ -77,35 +77,35 @@
         <div class="grid-3">
           <div class="series-card">
             <div class="series-card-image">
-              <img src="/mpbzfcpd-cat_product_01.png" alt="Spring collection" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              <img :src="img('mpbzfcpd-cat_product_01.png')" alt="Spring collection" style="width:100%;height:100%;object-fit:cover" loading="lazy">
             </div>
             <h3>春季系列</h3>
             <div class="count">6種商品</div>
           </div>
           <div class="series-card">
             <div class="series-card-image">
-              <img src="/mpbzfcrq-cat_product_10.png" alt="Night forest series" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              <img :src="img('mpbzfcrq-cat_product_10.png')" alt="Night forest series" style="width:100%;height:100%;object-fit:cover" loading="lazy">
             </div>
             <h3>夜森林系列</h3>
             <div class="count">3種商品</div>
           </div>
           <div class="series-card">
             <div class="series-card-image">
-              <img src="/mpbzfct5-cat_product_13.png" alt="Party series" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              <img :src="img('mpbzfct5-cat_product_13.png')" alt="Party series" style="width:100%;height:100%;object-fit:cover" loading="lazy">
             </div>
             <h3>派對系列</h3>
             <div class="count">2種商品</div>
           </div>
           <div class="series-card">
             <div class="series-card-image">
-              <img src="/mpbzfcqz-cat_product_07.png" alt="Stationery series" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              <img :src="img('mpbzfcqz-cat_product_07.png')" alt="Stationery series" style="width:100%;height:100%;object-fit:cover" loading="lazy">
             </div>
             <h3>文具系列</h3>
             <div class="count">3種商品</div>
           </div>
           <div class="series-card">
             <div class="series-card-image">
-              <img src="/mpbzfctn-cat_product_15.png" alt="Lifestyle series" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              <img :src="img('mpbzfctn-cat_product_15.png')" alt="Lifestyle series" style="width:100%;height:100%;object-fit:cover" loading="lazy">
             </div>
             <h3>人氣周邊</h3>
             <div class="count">4種商品</div>
@@ -115,3 +115,7 @@
     </section>
   </main>
 </template>
+
+<script setup lang="ts">
+import { img } from '../utils/img'
+</script>

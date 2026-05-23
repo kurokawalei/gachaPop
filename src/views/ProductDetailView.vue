@@ -15,13 +15,13 @@
         <div class="detail-grid">
           <div class="detail-gallery">
             <div class="detail-gallery-main">
-              <img src="/mpbzfcq0-cat_product_03.png" alt="Black cat night light figure" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+              <img :src="img('mpbzfcq0-cat_product_03.png')" alt="Black cat night light figure" style="width:100%;height:100%;object-fit:cover" loading="lazy">
             </div>
             <div class="detail-gallery-thumbs">
-              <div class="active"><img src="/mpbzfcq0-cat_product_03.png" alt="正面" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
-              <div><img src="/mpbzfcpd-cat_product_01.png" alt="夜光效果" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
-              <div><img src="/mpbzfcq9-cat_product_04.png" alt="包裝" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
-              <div><img src="/mpbzfcqr-cat_product_06.png" alt="尺寸對比" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+              <div class="active"><img :src="img('mpbzfcq0-cat_product_03.png')" alt="正面" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+              <div><img :src="img('mpbzfcpd-cat_product_01.png')" alt="夜光效果" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+              <div><img :src="img('mpbzfcq9-cat_product_04.png')" alt="包裝" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+              <div><img :src="img('mpbzfcqr-cat_product_06.png')" alt="尺寸對比" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
             </div>
           </div>
 
@@ -88,22 +88,23 @@
 import { ref } from 'vue'
 import { useCartStore } from '../stores/cartStore'
 import { useToast } from '../composables/useToast'
+import { img } from '../utils/img'
 
 const qty = ref(1)
 const cartStore = useCartStore()
 const { showToast } = useToast()
 
 const relatedProducts = [
-  { name: '白貓公仔', series: '春季系列', price: 120, image: '/mpbzfcpp-cat_product_02.png' },
-  { name: '貓掌肉球玩偶', series: '春季系列', price: 120, image: '/mpbzfcq9-cat_product_04.png' },
-  { name: '夜光鑰匙圈', series: '夜森林系列', price: 180, image: '/mpbzfcrq-cat_product_10.png' },
-  { name: '貓咪造型小時鐘', series: '派對系列', price: 220, image: '/mpbzfct5-cat_product_13.png' },
+  { name: '白貓公仔', series: '春季系列', price: 120, image: img('/mpbzfcpp-cat_product_02.png') },
+  { name: '貓掌肉球玩偶', series: '春季系列', price: 120, image: img('/mpbzfcq9-cat_product_04.png') },
+  { name: '夜光鑰匙圈', series: '夜森林系列', price: 180, image: img('/mpbzfcrq-cat_product_10.png') },
+  { name: '貓咪造型小時鐘', series: '派對系列', price: 220, image: img('/mpbzfct5-cat_product_13.png') },
 ]
 
 function handleAddToCart() {
   const name = '黑貓夜燈公仔'
   for (let i = 0; i < qty.value; i++) {
-    cartStore.addToCart('dtl-night-cat', name, 480, '/mpbzfcq0-cat_product_03.png')
+    cartStore.addToCart('dtl-night-cat', name, 480, img('/mpbzfcq0-cat_product_03.png'))
   }
   showToast(`已加入購物車：${name} x${qty.value}`)
 }

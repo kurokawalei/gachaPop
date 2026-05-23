@@ -58,22 +58,23 @@
 
 <script setup lang="ts">
 import type { Order } from '../types'
+import { img } from '../utils/img'
 
 const orders: Order[] = [
   {
     id: 'GP-20260515-001', date: '2026年5月15日', status: 'shipped',
     total: 2400, items: 3,
-    images: ['/mpbzfcpd-cat_product_01.png', '/mpbzfcpp-cat_product_02.png'],
+    images: [img('/mpbzfcpd-cat_product_01.png'), img('/mpbzfcpp-cat_product_02.png')],
   },
   {
     id: 'GP-20260510-003', date: '2026年5月10日', status: 'processing',
     total: 120, items: 1,
-    images: ['/mpbzfcq9-cat_product_04.png'],
+    images: [img('/mpbzfcq9-cat_product_04.png')],
   },
   {
     id: 'GP-20260428-007', date: '2026年4月28日', status: 'delivered',
     total: 520, items: 3,
-    images: ['/mpbzfcte-cat_product_14.png', '/mpbzfctn-cat_product_15.png', '/mpbzfcqj-cat_product_05.png'],
+    images: [img('/mpbzfcte-cat_product_14.png'), img('/mpbzfctn-cat_product_15.png'), img('/mpbzfcqj-cat_product_05.png')],
   },
 ]
 
